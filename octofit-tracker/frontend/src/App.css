@@ -1,0 +1,296 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 28px 18px 20px;
+  color: #f8f7f2;
+  background: #183f37;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 56px 4px;
+  color: inherit;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.brand-light {
+  color: #b6cdc0;
+  font-weight: 400;
+}
+
+.nav-label,
+.eyebrow,
+.metric-label,
+.activity-period {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-label {
+  margin: 0 0 12px 12px;
+  color: #a7c3b5;
+}
+
+.primary-nav {
+  display: grid;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 5px;
+  color: #d4e0d8;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #fff;
+  background: #2a564a;
+}
+
+.nav-indicator {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #a7c3b5;
+  border-radius: 50%;
+}
+
+.nav-item.active .nav-indicator {
+  border-color: #f1a277;
+  background: #f1a277;
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 14px 5px 0;
+  border-top: 1px solid #386257;
+  color: #d4e0d8;
+  font-size: 12px;
+}
+
+.avatar {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  color: #183f37;
+  background: #f1a277;
+  font-weight: 700;
+}
+
+.main-content {
+  min-width: 0;
+  padding: 54px clamp(24px, 6vw, 88px) 72px;
+}
+
+.page-heading,
+.activity-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #79877e;
+}
+
+.page-heading h1,
+.section-placeholder h1 {
+  margin: 0;
+  color: #173d35;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.page-heading .btn {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  border-color: #d26847;
+  border-radius: 4px;
+  background: #d26847;
+  font-size: 13px;
+}
+
+.page-heading .btn:hover {
+  border-color: #b85235;
+  background: #b85235;
+}
+
+.summary-row {
+  margin-top: 38px;
+}
+
+.metric-panel {
+  min-height: 142px;
+  padding: 20px 21px;
+  border-top: 2px solid #cbd8cc;
+  background: #f0f3ec;
+}
+
+.metric-panel-accent {
+  border-color: #dc8a65;
+  background: #f8eee6;
+}
+
+.metric-label {
+  margin: 0 0 10px;
+  color: #6b7c70;
+}
+
+.metric-value {
+  margin: 0;
+  color: #183f37;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.metric-value span {
+  color: #68786d;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.metric-note {
+  margin: 12px 0 0;
+  color: #718077;
+  font-size: 12px;
+}
+
+.activity-panel {
+  margin-top: 36px;
+  padding: 24px 0;
+  border-top: 1px solid #d9dfd8;
+  border-bottom: 1px solid #d9dfd8;
+}
+
+.activity-panel-heading h2 {
+  margin: 0;
+  color: #173d35;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.activity-period {
+  color: #79877e;
+}
+
+.empty-state {
+  display: grid;
+  min-height: 188px;
+  place-content: center;
+  justify-items: center;
+  color: #77847b;
+  font-size: 13px;
+}
+
+.empty-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  place-items: center;
+  border: 1px solid #bbccbd;
+  border-radius: 50%;
+  color: #3e705c;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+.section-placeholder {
+  padding-top: 12px;
+}
+
+.section-placeholder p:last-child {
+  margin-top: 16px;
+  color: #718077;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: auto;
+    padding: 14px 18px;
+  }
+
+  .brand {
+    margin: 0 0 14px;
+  }
+
+  .nav-label,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .primary-nav {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .nav-indicator {
+    display: none;
+  }
+
+  .main-content {
+    padding: 34px 20px 48px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+  }
+
+  .page-heading .btn {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
